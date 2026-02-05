@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Iframe Site</title>
+    <style>
+        body { font-family: system-ui, sans-serif; line-height: 1.5; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        .iframe-container { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; margin-bottom: 2rem; background: #eee; }
+        .iframe-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    </style>
+</head>
+<body>
+    <h1>High Performance Iframes</h1>
+    <p>The content below loads lazily to keep the initial paint fast.</p>
+
+    <div class="iframe-container">
+        <iframe 
+            src="https://sites.google.com/outlook.com/business-strategy" 
+            loading="lazy" 
+            sandbox="allow-scripts allow-same-origin"
+            title="Example Content">
+        </iframe>
+    </div>
+
+    <div class="iframe-container">
+        <iframe 
+            src="https://wikipedia.org" 
+            loading="lazy" 
+            title="Secondary Content">
+        </iframe>
+    </div>
+</body>
+</html>
